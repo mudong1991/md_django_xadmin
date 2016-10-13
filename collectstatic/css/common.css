@@ -1,0 +1,39 @@
+/*定义通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: darkslategray;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	outline: none;
+	-moz-outline-style: none;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:focus{outline:none; -moz-outline-style: none;}
+a:link{
+	text-decoration: none;
+}
+.on{
+	display: block;
+}
+.off{
+	display: none;
+}
+input,button,select,textarea{
+	outline:none; -moz-outline-style: none;
+}
+

@@ -1,0 +1,43 @@
+.ui-jqgrid tr.ui-row-ltr td{
+    padding: 5px 5px;
+}
+.ui-jqgrid .ui-jqgrid-view {
+    font-size: 12px;
+}
+.ui-jqgrid .ui-jqgrid-htable .ui-th-div {
+    height: 23px;
+    margin-top: 8px;
+}
+.ui-jqgrid .ui-pg-input, .ui-jqgrid .ui-jqgrid-toppager .ui-pg-input {
+    height: 20px;
+    width: auto;
+    font-size: 12px;
+    margin: 0;
+    line-height: inherit;
+    padding: 2px 2px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.ui-jqgrid .ui-pg-input:focus,.ui-jqgrid .ui-jqgrid-toppager .ui-pg-input:focus{
+    box-shadow: 0 0 3px #74B9EF;
+    border: 1px solid #74B9EF;
+}
+.ui-jqgrid .ui-jqgrid-pager .ui-pager-table{
+    font-size: 12px;
+    height: 100%;
+}
+.ui-jqgrid .ui-pg-selbox{
+    width: 60px;
+    height: 21px;
+    font-size: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    line-height: inherit;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.ui-jqgrid .ui-pg-selbox:focus{
+    box-shadow: 0 0 3px #74B9EF;
+    border: 1px solid #74B9EF;
+}

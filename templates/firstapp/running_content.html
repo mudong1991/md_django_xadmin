@@ -1,0 +1,169 @@
+{% extends "firstapp/iframe_angular_base.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static "libs/jquery.jqGrid/5.1.0/css/ui-lightness/jquery-ui.css" %}"/>
+    <link rel="stylesheet" href="{% static "libs/jquery.jqGrid/5.1.0/css/ui.jqgrid.css" %}" />
+{% endblock %}
+
+{% block head_script %}
+<script type="text/javascript" src="{% static "libs/jquery.jqGrid/5.1.0/js/jquery.jqGrid.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "libs/jquery.jqGrid/5.1.0/js/i18n/grid.locale-cn.js" %}"></script>
+    <script type="text/javascript" src="{% static "libs/jquery.jqGrid/5.1.0/plugins/jquery.searchFilter.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/validate/validate_ip.js" %}"></script>
+{% endblock %}
+
+{% block page_content %}
+<div ng-controller="systemController">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h6 class="panel-title">告警信息</h6>
+        </div>
+        <table class="table table-bordered table-responsive" >
+            <tr>
+                <td style="padding-left: 20px; text-align: left">
+                    告警总数:<a href="" style="color: blue; text-decoration: underline; margin-left: 4px" ng-bind="warning_info.warning_total_count" ng-click="show_warning('true')"></a>
+                    , 未阅读数<a href="" style="color: red; text-decoration: underline; margin-left: 4px" ng-bind="warning_info.warning_unread_count" ng-click="show_warning('false')">0</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; text-align: left"><b style="margin-right: 6px">更新时间:</b><b style="font-weight: normal" ng-bind="warning_info.last_update_time"></b></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h6 class="panel-title">基本信息</h6>
+        </div>
+        <table class="table table-bordered table-hover table-responsive">
+        <tbody style="text-align: center">
+            <tr ng-repeat="info in basic_info">
+                <td width="50%" ng-bind="info.item_name"></td>
+                <td ng-bind="info.item_value"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="clearfix">
+        <div class="col-xs-5" style="padding: 0px; padding-right: 10px">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">硬件状态</h6>
+                </div>
+                <table class="table table-responsive border-no" >
+                    <tbody>
+                        <tr>
+                            <td class="col-xs-3 text-right" >CPU</td>
+                            <td class="col-xs-9">
+                                <div class="col-xs-9" >
+                                    <div class="progress progress-striped active" style="margin: 0">
+                                       <div class="progress-bar progress-bar-success" role="progressbar"
+                                          aria-valuemin="0" aria-valuemax="100"
+                                          id="cpu_percent_info" >
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 text-left" ng-bind="resource_info.cpu_percent+'%'">
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-4 text-right">内存</td>
+                            <td>
+                                <div class="col-xs-9" >
+                                    <div class="progress progress-striped active" style="margin: 0">
+                                       <div class="progress-bar progress-bar-warning" role="progressbar"
+                                           aria-valuemin="0" aria-valuemax="100"
+                                           id="memory_percent_info">
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 text-left" ng-bind="resource_info.memory_percent+'%'"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-xs-4 text-right">硬盘</td>
+                            <td>
+                                <table width="100%" >
+                                    <tr ng-repeat="item in resource_info.disk_part">
+                                        <td width="10" height="26" ng-bind="item.disk_part_name">
+                                        </td>
+                                        <td>
+                                            <div class="col-xs-9" style="padding-left: 4px; padding-right: 2px">
+                                                <div class="progress progress-striped active">
+                                                   <div class="progress-bar progress-bar-danger disk_part_bar" role="progressbar"
+                                                        aria-valuemin="0" aria-valuemax="100"
+                                                       style="width: {[{ item.disk_part_percent }]}%;
+                                                        background-color: {[{ item.percent_bgcolor }]}">
+                                                   </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-3 text-left" ng-bind="item.disk_part_percent +'%'">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+{#                        <tr>#}
+{#                            <td class="col-xs-4 text-right">CPU运行温度</td>#}
+{#                            <td>#}
+{#                                <div class="col-xs-9" >#}
+{#                                    <div class="progress progress-striped active" style="margin: 0">#}
+{#                                       <div class="progress-bar progress-bar-info" role="progressbar"#}
+{#                                           aria-valuemin="0" aria-valuemax="100"#}
+{#                                          style="width: 40%;">#}
+{#                                       </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-xs-3 text-left">#}
+{#                                    40%#}
+{#                                </div>#}
+{#                            </td>#}
+{#                        </tr>#}
+{#                        #}
+{#                        <tr>#}
+{#                            <td class="col-xs-4 text-right">风机运行状态</td>#}
+{#                            <td style="padding-left: 22px">正常</td>#}
+{#                        </tr>#}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-xs-7" style="padding: 0;padding-left: 10px">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h6 class="panel-title">网络状态</h6>
+                </div>
+                <div id="interface_table">
+                    <table id="jqGrid_interface"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block afterbody_script %}
+    <script type="text/javascript">
+        //jgGrid表格宽度自适应
+        $(function () {
+            $(document).ready(function (){
+                var jqGridSelector = $("#jqGrid_interface");
+                var ele_width = $("#interface_table").width();
+                jqGridSelector.setGridWidth(ele_width-2);
+            });
+
+            $(window).resize(function (){
+                var jqGridSelector = $("#jqGrid_interface");
+                var ele_width = $("#interface_table").width();
+                jqGridSelector.setGridWidth(ele_width-2);
+            });
+            $(window).load();
+        })
+    </script>
+{% endblock %}

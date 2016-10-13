@@ -1,0 +1,48 @@
+html,body{
+	margin: 0;
+	height: 100%;
+	overflow-y: hidden;
+	background: transparent url(../img/mainbg.png) repeat;
+}
+#top-nav{
+	max-height: 52px;
+}
+#body-content{
+	position: relative;
+	height: 100%;
+	margin: 0 !important;
+	min-height: 550px;
+}
+#cust_footer{
+	background-color: #31353a;
+	border-top: 2px solid #f16e50;
+	min-height: 60px;
+	overflow: hidden;
+	width: 100%;
+	color: white;
+	position: absolute;
+	bottom: 0;
+}
+footer{
+	padding-top: 10px;
+}
+footer p{
+	line-height: 12px;
+}
+#content-block{
+	height: 100%;
+	padding-top: 60px;
+	padding-bottom: 80px;
+}
+#content-block-contain{
+	height: 100%;
+	overflow: auto;
+	background: white;
+	padding:0 6px;
+	border-radius: 2px;
+}
+#left-side{
+	height: 100%;
+	padding-top: 60px;
+}
+

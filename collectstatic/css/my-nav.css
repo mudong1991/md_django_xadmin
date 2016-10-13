@@ -1,0 +1,25 @@
+.my-nav{
+    width: 100%;
+    background-color: #ECECEC;
+    border-bottom: 5px solid #4A9FB8;
+    margin-bottom: 10px;
+}
+.my-nav ul{
+    width: 340px;
+    background: #E3E3E3;
+}
+.my-nav ul li a{
+    height: 36px;
+    color: #546F8E;
+    line-height: 12px;
+}
+.my-nav ul li a:hover{
+    color:white;
+    background-color: #4A9FB8;
+    border-color: #4A9FB8;
+}
+.active a{
+    color: white !important;
+    background-color: #4A9FB8 !important;
+    border-color: #4A9FB8 !important;
+}

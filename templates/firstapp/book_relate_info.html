@@ -1,0 +1,107 @@
+{% load staticfiles %}
+{% load i18n xadmin_tags %}
+<div>
+    <ul id="myTab" class="nav nav-tabs">
+       <li class="active">
+          <a href="#present_borrow" data-toggle="tab">
+              借出信息
+          </a>
+       </li>
+        <li>
+           <a href="#ios" data-toggle="tab">
+               借出历史
+           </a>
+       </li>
+       <li>
+           <a href="#ios" data-toggle="tab">
+               图书信息
+           </a>
+       </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+            <p id="tabContentHelp" class="text-warning">请选择一行数据，查看相关信息！</p>
+           <div class="tab-pane fade in active" id="present_borrow">
+                <div id="present_borrow_table" style="width: 100%;height: 100%;">
+                    <table id="jqGrid_BorrowPresent"></table>
+                    <div id="jqGrid_BorrowPresentPager"></div>
+                </div>
+           </div>
+           <div class="tab-pane fade" id="ios">
+              <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+              TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+           </div>
+           <div class="tab-pane fade" id="jmeter">
+              <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+           </div>
+           <div class="tab-pane fade" id="ejb">
+              <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
+              </p>
+           </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    var jqgrid = jGrid();
+    var book_id = -1;
+
+
+    var borrowing_data_url = '/api/bookborrowinfo/';
+    var present_grid_selector = "#jqGrid_BorrowPresent";
+    var present_pager_selector = "#jqGrid_BorrowPresentPager";
+    var extra_params = {
+        multiselect: false,
+        sortname: 'borrow_time',
+        sortorder: 'desc',
+        loadui: 'disable',
+        serializeGridData: function (postData){
+            postData.book_id = book_id;
+            postData.status = 0;
+            return postData
+        },
+        loadError: function (data) {
+            // jqGrid在删除了整页数据后重新加载当前页会出错，所以需要额外处理。
+            $grid.loadPrePage(present_grid_selector);
+        }
+    };
+
+    var col_models = [
+        {label: 'ID', name: 'id', index: 'id', width: 40, hidden: true},
+        {label: "{% trans 'book_name' %}", name: 'book_name', align: 'center', width:80},
+        {label: '学生', name: 'student_name', align: 'center', width: 40},
+        {label: '借出时间', name: 'borrow_time', width: 40, align: 'center'},
+        {label: '应还时间', name: 'standard_return_time', width: 40},
+        {label: '是否归还', name: 'status', width: 30}
+    ];
+    jqgrid.init(present_grid_selector, present_pager_selector, borrowing_data_url, col_models, extra_params);
+
+    function bindData() {
+        var checked_length = $(".action-select").filter(":checked").length;
+        if(checked_length>0){
+            $("#tabContentHelp").hide();
+            book_id = $($(".action-select").filter(":checked")[0]).val();
+        }else {
+            $("#tabContentHelp").show();
+            book_id = -1;
+        }
+        jqgrid.reloadGrid(present_grid_selector);
+    }
+
+
+    bindData();
+    $(".action-select").on("click", function () {
+        bindData();
+    })
+</script>
+
+<script type="text/javascript">
+    //jgGrid表格宽度自适应
+    $(function () {
+        $(window).resize(function (){
+            var jqGridSelector = $("#jqGrid_BorrowPresent");
+            var ele_width = $("#present_borrow_table").width();
+            jqGridSelector.setGridWidth(ele_width-2);
+        });
+        $(window).resize();
+    })
+</script>

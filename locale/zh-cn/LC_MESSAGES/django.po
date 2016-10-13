@@ -1,0 +1,558 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-13 15:34+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: .\XadminDemo\settings.py:142
+msgid "Simplified Chinese"
+msgstr ""
+
+#: .\XadminDemo\settings.py:143
+msgid "English"
+msgstr ""
+
+#: .\XadminDemo\settings.py:187
+msgid "Educational administration system"
+msgstr ""
+
+#: .\XadminDemo\settings.py:188
+msgid "Shenzhen, the industrial bank  MuDong making - 2016"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:12
+#, python-format
+msgid "Can add %s"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:13
+#, python-format
+msgid "Can change %s"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:14
+#, python-format
+msgid "Can edit %s"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:15
+#, python-format
+msgid "Can delete %s"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:16
+#, python-format
+msgid "Can view %s"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:58 .\firstapp\models.py:40
+msgid "avatar"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:83
+msgid "Personal info"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:87
+msgid "Permissions"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:90
+msgid "Important dates"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:95
+msgid "Status"
+msgstr ""
+
+#: .\firstapp\admins\AuthAdmins.py:107
+msgid "Permission Name"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:37
+#, python-format
+msgid ""
+"User %(user)s@%(ip)s operating the %(operation)s, the result is %(result)s"
+msgid_plural ""
+"User %(user)s@%(ip)s operating the %(operation)s, the result is %(result)s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\firstapp\admins\ModelAdmins.py:48 .\firstapp\models.py:73
+#: .\firstapp\models.py:155
+msgid "description"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:60
+#, python-format
+msgid "1 comment was successfully %(action)s."
+msgid_plural "%(count)s comments were successfully %(action)s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\firstapp\admins\ModelAdmins.py:63 .\firstapp\admins\ModelAdmins.py:101
+msgid "read"
+msgid_plural "read"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\firstapp\admins\ModelAdmins.py:65 .\firstapp\admins\ModelAdmins.py:103
+#, python-format
+msgid "Read selected %(verbose_name_plural)s"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:98
+#, python-format
+msgid "1 warning log was successfully %(action)s."
+msgid_plural "%(count)s warning logs were successfully %(action)s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\firstapp\admins\ModelAdmins.py:138 .\firstapp\models.py:198
+msgid "image"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:144
+msgid "Basic information"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:150
+msgid "Book information"
+msgstr ""
+
+#: .\firstapp\admins\ModelAdmins.py:160
+msgid "Inventory information"
+msgstr ""
+
+#: .\firstapp\forms.py:13 .\firstapp\forms.py:27 .\firstapp\forms.py:55
+msgid "Password"
+msgstr ""
+
+#: .\firstapp\forms.py:14
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user's "
+"password, but you can change the password using <a href=\"password/\">this "
+"form</a>."
+msgstr ""
+
+#: .\firstapp\forms.py:25
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: .\firstapp\forms.py:29
+msgid "Password confirmation"
+msgstr ""
+
+#: .\firstapp\forms.py:31
+msgid "Enter the same password as before, for verification."
+msgstr ""
+
+#: .\firstapp\forms.py:57 .\firstapp\forms.py:67
+msgid ""
+"Your password must contain at least 6 character. Your password can't be too "
+"similar to your other personal information.Your password can't be a commonly "
+"used password.Your password can't be entirely numeric."
+msgstr ""
+
+#: .\firstapp\forms.py:65
+msgid "New password"
+msgstr ""
+
+#: .\firstapp\models.py:41
+msgid "QQ number"
+msgstr ""
+
+#: .\firstapp\models.py:42
+msgid "mobile"
+msgstr ""
+
+#: .\firstapp\models.py:43
+msgid "Personal url"
+msgstr ""
+
+#: .\firstapp\models.py:44
+msgid "session"
+msgstr ""
+
+#: .\firstapp\models.py:45
+msgid "online"
+msgstr ""
+
+#: .\firstapp\models.py:46
+msgid "login times"
+msgstr ""
+
+#: .\firstapp\models.py:49 .\firstapp\xadmin_views\commonviews.py:60
+msgid "user"
+msgstr ""
+
+#: .\firstapp\models.py:62
+msgid "login/logout"
+msgstr ""
+
+#: .\firstapp\models.py:63
+msgid "other"
+msgstr ""
+
+#: .\firstapp\models.py:65
+msgid "login successful"
+msgstr ""
+
+#: .\firstapp\models.py:65
+msgid "logout successful"
+msgstr ""
+
+#: .\firstapp\models.py:67
+msgid "username"
+msgstr ""
+
+#: .\firstapp\models.py:68 .\firstapp\models.py:150
+msgid "IP"
+msgstr ""
+
+#: .\firstapp\models.py:69
+msgid "operation type"
+msgstr ""
+
+#: .\firstapp\models.py:71 .\firstapp\models.py:156
+msgid "read over"
+msgstr ""
+
+#: .\firstapp\models.py:72
+msgid "time"
+msgstr ""
+
+#: .\firstapp\models.py:76 .\firstapp\xadmin_views\commonviews.py:51
+msgid "user log"
+msgstr ""
+
+#: .\firstapp\models.py:77
+msgid "user logs"
+msgstr ""
+
+#: .\firstapp\models.py:128 .\firstapp\xadmin_views\commonviews.py:38
+msgid "system status"
+msgstr ""
+
+#: .\firstapp\models.py:140 .\firstapp\models.py:145 .\firstapp\models.py:239
+msgid "unknown"
+msgstr ""
+
+#: .\firstapp\models.py:141
+msgid "system exception"
+msgstr ""
+
+#: .\firstapp\models.py:142
+msgid "network exception"
+msgstr ""
+
+#: .\firstapp\models.py:146
+msgid "slight"
+msgstr ""
+
+#: .\firstapp\models.py:147
+msgid "general"
+msgstr ""
+
+#: .\firstapp\models.py:148
+msgid "serious"
+msgstr ""
+
+#: .\firstapp\models.py:152
+msgid "warning type"
+msgstr ""
+
+#: .\firstapp\models.py:154
+msgid "serious level"
+msgstr ""
+
+#: .\firstapp\models.py:157
+msgid "happened time"
+msgstr ""
+
+#: .\firstapp\models.py:158
+msgid "extraneous information"
+msgstr ""
+
+#: .\firstapp\models.py:161 .\firstapp\xadmin_views\commonviews.py:52
+msgid "warning log"
+msgstr ""
+
+#: .\firstapp\models.py:162
+msgid "warning logs"
+msgstr ""
+
+#: .\firstapp\models.py:172 .\firstapp\models.py:177
+msgid "Book Categories"
+msgstr ""
+
+#: .\firstapp\models.py:173
+msgid "ordering"
+msgstr ""
+
+#: .\firstapp\models.py:176
+msgid "Book Category"
+msgstr ""
+
+#: .\firstapp\models.py:187
+msgid "purchase"
+msgstr ""
+
+#: .\firstapp\models.py:188
+msgid "borrowed"
+msgstr ""
+
+#: .\firstapp\models.py:189
+msgid "present"
+msgstr ""
+
+#: .\firstapp\models.py:192
+msgid "number"
+msgstr ""
+
+#: .\firstapp\models.py:193
+msgid "Serial number must be unique"
+msgstr ""
+
+#: .\firstapp\models.py:194
+msgid "name"
+msgstr ""
+
+#: .\firstapp\models.py:195
+msgid "Author"
+msgstr ""
+
+#: .\firstapp\models.py:196
+msgid "category"
+msgstr ""
+
+#: .\firstapp\models.py:197
+msgid "Add the classification of the books "
+msgstr ""
+
+#: .\firstapp\models.py:199
+msgid "page"
+msgstr ""
+
+#: .\firstapp\models.py:200
+msgid "book number"
+msgstr ""
+
+#: .\firstapp\models.py:201
+msgid "price"
+msgstr ""
+
+#: .\firstapp\models.py:202
+msgid "publish time"
+msgstr ""
+
+#: .\firstapp\models.py:203
+msgid "publish house"
+msgstr ""
+
+#: .\firstapp\models.py:204
+msgid "note"
+msgstr ""
+
+#: .\firstapp\models.py:207
+msgid "source"
+msgstr ""
+
+#: .\firstapp\models.py:208
+msgid "storage time"
+msgstr ""
+
+#: .\firstapp\models.py:209
+msgid "inventory"
+msgstr ""
+
+#: .\firstapp\models.py:210
+msgid "borrowing times"
+msgstr ""
+
+#: .\firstapp\models.py:213 .\firstapp\xadmin_views\commonviews.py:44
+msgid "book"
+msgstr ""
+
+#: .\firstapp\models.py:214
+msgid "books"
+msgstr ""
+
+#: .\firstapp\models.py:226
+msgid "student"
+msgstr ""
+
+#: .\firstapp\models.py:227
+msgid "students"
+msgstr ""
+
+#: .\firstapp\models.py:237
+msgid "borrow"
+msgstr ""
+
+#: .\firstapp\models.py:238
+msgid "return"
+msgstr ""
+
+#: .\firstapp\models.py:250
+msgid "bookborrowinfo"
+msgstr ""
+
+#: .\firstapp\models.py:251
+msgid "bookborrowinfos"
+msgstr ""
+
+#: .\firstapp\password_validators.py:20
+#, python-format
+msgid ""
+"This password is too short. It must contain at least %(min_length)d "
+"character."
+msgid_plural ""
+"This password is too short. It must contain at least %(min_length)d "
+"characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\firstapp\password_validators.py:44
+#, python-format
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr ""
+
+#: .\firstapp\password_validators.py:54
+msgid "This password is too common."
+msgstr ""
+
+#: .\firstapp\password_validators.py:63
+msgid "This password is entirely numeric."
+msgstr ""
+
+#: .\firstapp\plugins\base_init_plugin.py:18
+msgid "Django Xadmin"
+msgstr ""
+
+#: .\firstapp\plugins\base_init_plugin.py:19
+msgid "my-company.inc"
+msgstr ""
+
+#: .\firstapp\plugins\custom_aggregation.py:16
+#: .\firstapp\plugins\custom_aggregation.py:44
+msgid "Min"
+msgstr ""
+
+#: .\firstapp\plugins\custom_aggregation.py:16
+#: .\firstapp\plugins\custom_aggregation.py:46
+msgid "Max"
+msgstr ""
+
+#: .\firstapp\plugins\custom_aggregation.py:16
+#: .\firstapp\plugins\custom_aggregation.py:48
+msgid "Avg"
+msgstr ""
+
+#: .\firstapp\plugins\custom_aggregation.py:16
+#: .\firstapp\plugins\custom_aggregation.py:50
+msgid "Sum"
+msgstr ""
+
+#: .\firstapp\plugins\custom_aggregation.py:16
+#: .\firstapp\plugins\custom_aggregation.py:52
+msgid "Count"
+msgstr ""
+
+#: .\firstapp\plugins\custom_quick_form.py:82
+#, python-format
+msgid "Create New %s"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:36
+msgid "Index"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:37
+msgid "home"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:42
+msgid "Book management"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:49
+msgid "Log management"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:57
+msgid "User management"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:58
+msgid "group"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:62
+msgid "permission"
+msgstr ""
+
+#: .\firstapp\xadmin_views\commonviews.py:82
+#: .\templates\firstapp\base_site.html:73
+msgid "Home"
+msgstr ""
+
+#: .\firstapp\xadmin_views\custom_site_views.py:14
+msgid "System running status"
+msgstr ""
+
+#: .\firstapp\xadmin_views\listviews.py:11
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr ""
+
+#: .\firstapp\xadmin_views\loginviews.py:21
+msgid "Username Login"
+msgstr ""
+
+#: .\templates\firstapp\base_site.html:32
+msgid "Welcome,"
+msgstr ""
+
+#: .\templates\firstapp\base_site.html:38
+msgid "Log out"
+msgstr ""
+
+#: .\templates\firstapp\base_site.html:52
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: .\templates\firstapp\book_relate_info.html:70
+msgid "book_name"
+msgstr ""
+
+#: .\templates\firstapp\cust_model_list.html:30
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: .\templates\firstapp\cust_model_list.html:41
+msgid "Columns"
+msgstr ""
+
+#: .\templates\firstapp\cust_model_list.html:44
+msgid "Restore Selected"
+msgstr ""
+
+#: .\templates\firstapp\cust_model_list.html:149
+msgid "Empty list"
+msgstr ""
